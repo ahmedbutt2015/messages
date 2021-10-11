@@ -23,3 +23,8 @@ Route::get('contacts', [ContactController::class, 'index']);
 Route::get('conversations', [ConversationController::class, 'index']);
 Route::post('conversations', [ConversationController::class, 'store']);
 Route::get('conversations/{id}', [ConversationController::class, 'show']);
+
+
+Route::get('conversations/{id}/messages/', [MessageController::class, 'index']);
+Route::post('conversations/{id}/messages/', [MessageController::class, 'store']);
+Route::get('conversations/{id}/messages/{message_id}', [MessageController::class, 'show']);
